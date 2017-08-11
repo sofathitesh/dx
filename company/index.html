@@ -36,7 +36,7 @@
 
   <body ng-app="companyApp" ng-controller="compnayController">
 
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -45,11 +45,26 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+          <a class="navbar-brand" href="#">Clineva</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a  href="#"><span class="glyphicon glyphicon-envelope">&nbsp;Message</span></a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-user">&nbsp;My Profile</span></a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user">&nbsp;My Profile</span><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+
+
+
             <li><a href="#"><span class="glyphicon glyphicon-briefcase">&nbsp;Help</span></a></li>
             <li><a href="#"><span class="glyphicon glyphicon-home">&nbsp;Home</span></a></li>
             <li><a href="#"><span class="glyphicon glyphicon-share-alt">&nbsp;Logout</span></a></li>
@@ -58,27 +73,13 @@
       </div>
     </nav>
 
-    <div class="container-fluid">
+    <div class="container-fluid" id="container-fluid">
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Reports</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">Export</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item</a></li>
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
-            <li><a href="">More navigation</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
-          </ul>
+    <div id="simple-treeview" dx-tree-view="treeViewOptions"></div>
+        </div>
+        <div class="col-sm-12 col-md-offset-10 col-md-2" id="loginUser">
+          <span class="text-center" id="fixFontSize">User : <b>Hitesh Sofat</b></span>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Dashboard</h1>
@@ -91,7 +92,13 @@
           </div>
         </div>
       </div>
-    </div>
+   
+	  </div>
+    <footer class="footer navbar-fixed-bottom">
+      <div class="container">
+        <span class="text-muted">Place sticky footer content here.</span>
+      </div>
+    </footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
